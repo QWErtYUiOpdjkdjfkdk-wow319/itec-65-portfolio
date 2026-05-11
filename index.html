@@ -6,22 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andrea's Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body>
 
     <header>
-        <div class="logo"></div>
+        <div class="branding">
+            <div class="logo"></div>
+            <h1>My Portfolio</h1>
 
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#hero">HOME</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#skills">SKILLS</a></li>
-                <li><a href="#projects">PROJECTS</a></li>
-                <li><a href="#contacts">CONTACTS</a></li>
-            </ul>
-        </nav>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#hero">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#skills">SKILLS</a></li>
+                    <li><a href="#projects">PROJECTS</a></li>
+                    <li><a href="#contacts">CONTACTS</a></li>
+                </ul>
+            </nav>
     </header>
 
     <section class="hero" id="hero">
@@ -60,10 +63,28 @@
 
 
     <section class="projects" id="projects">
-        <h3>Projects I've made for school:</h3>
-        <a href="project1.html">Calculator</a>
-        <a href="project2.html">Tic Tac Toe in C++ (Group Project)</a>
-        <a href="project3.html">Library System</a>
+        <h1>Projects I've made for school:</h1>
+
+        <div class="projectcard">
+            <a target="_blank" href="project1.html" class="proj">
+                Python Menu (Click for details)
+            </a>
+            <img src="customermenu.png" alt="Project 1 Screenshot from an online compiler.">
+        </div>
+
+        <div class="projectcard">
+            <a target="_blank" href="project2.html" class="proj">
+                Tic Tac Toe in C++ (Group Project) (Click for details)
+            </a>
+            <img src="tictactoe.png" alt="Project 2 Screenshot from an online compiler.">
+        </div>
+
+        <div class="projectcard">
+            <a target="_blank" href="project3.html" class="proj">
+                MVC with PHP + MySQL (Click for details)
+            </a>
+            <img src="mvc_student_app.png" alt="Project 3 Screenshot">
+        </div>
     </section>
 
     <section class="contacts" id="contacts">
