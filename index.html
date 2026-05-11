@@ -9,11 +9,13 @@
 </head>
 
 <body>
+
     <header>
-        <div class="icon"></div>
+        <div class="logo"></div>
+
         <nav>
             <ul class="nav-links">
-                <li><a href="index.html">HOME</a></li>
+                <li><a href="#hero">HOME</a></li>
                 <li><a href="#about">ABOUT</a></li>
                 <li><a href="#skills">SKILLS</a></li>
                 <li><a href="#projects">PROJECTS</a></li>
@@ -22,13 +24,54 @@
         </nav>
     </header>
 
-    <div class="hero" id="hero"></div>
-    <div class="about" id="about"></div>
-    <div class="skills" id="skills">
-        <span class="tag">HTML</span>
-        <span class="tag">CSS</span>
-    </div>
-    <footer></footer>
+    <section class="hero" id="hero">
+        <img src="hero.png" alt="Hero section">
+    </section>
+
+
+    <section class="about" id="about">
+        <img src="about.png" alt="About Me section">
+    </section>
+
+    <section class="skills" id="skills">
+        <div class="tags">
+
+            <div class="skills-group">
+                <div class="language">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Java</span>
+                    <span class="tag">PHP</span>
+                    <span class="tag">C++</span>
+                </div>
+            </div>
+
+            <div class="skills-group">
+                <div class="tools">
+                    <span class="tag">Git</span>
+                    <span class="tag">Canva</span>
+                    <span class="tag">MS Office</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="projects" id="projects">
+        <h3>Projects I've made for school:</h3>
+        <a href="project1.html">Calculator</a>
+        <a href="project2.html">Tic Tac Toe in C++ (Group Project)</a>
+        <a href="project3.html">Library System</a>
+    </section>
+
+    <section class="contacts" id="contacts">
+        <h3>Contact me, and we'll get started</h3>
+        <div class="address">Address:</div>
+        <div class="phone">Phone#:</div>
+        <div class="Email">Email:</div>
+    </section>
 </body>
 
 </html>
