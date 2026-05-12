@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,124 +13,28 @@
             padding: 20px;
         }
 
-        h3, 
         pre {
             background: #1f2937;
             padding: 20px;
             border-radius: 10px;
-            overflow-x: clip;
+            overflow-x: auto;
         }
 
-        code {
-            font-size: 14px;
-            line-height: 1.5;
+        img {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 50%;
         }
     </style>
 </head>
+
 <body>
-    <h1>Hi! This is the code.</h1>
-    <h2>To make it work, install XAMPP or WAMP. Copy+paste and save them in separate .php files under the same folder. Place file in the root folder, e.g. 'C:\xampp\htdocs\'. Open server control panel and click Start next to Apache. Then paste its location from htdocs folder like this: 'http://localhost/filename.php' onto the browser address bar. You can also paste the code directly to online sandboxes like OnlinePHP.io or Jumpshare or use VSCode or the built-in PHP server if PHP is installed.</h2>
-
-    <h3>Book.php</h3>
-    <pre><code>&lt;?php
-
-class Book{
-  public $bookTitle;
-  public $author;
-  public $borrowerName = null;
-  public $daysBorrowed = 0;
-
-  function set_details($bookTitle, $author, $borrowerName, $daysBorrowed) {
-    $this->bookTitle = $bookTitle;
-    $this->author = $author;
-    $this->borrowerName = $borrowerName;
-    $this->daysBorrowed = $daysBorrowed;
-  }
-  function get_details() {
-    echo "Book Title: " . $this->bookTitle . "<br>";
-    echo "Author: " . $this->author . "<br>";
-    echo "Borrower's Name: " . $this->borrowerName ."<br>";
-    echo "Days Borrowed: " . $this->daysBorrowed . "<br>";
-  }
-}
-
-//calculateLateFee to sum up the borrower's fees
-function calculateLateFee($daysBorrowed){
-    $lateFee = 0;
-
-if ($daysBorrowed == 0) {
-    echo "Book available for borrow, no late fees<br>";
-}
-else {
-    $i = 8;
-
-    while ($i &lt;= $daysBorrowed) {
-        if ($i &lt;= 14) {
-            $lateFee += 10;
-        } else {
-            $lateFee += 20;
-        }
-        $i++;
-    }
-
-    echo "Late Fee: ₱" . $lateFee . "<br>";
-}
-}
-
-//The getStatus function
-function getStatus($borrowerName) {
-    if ($borrowerName == null) {
-        echo "Status: Available<br><br>";
-    } else {
-        echo "Status: Borrowed<br><br>";
-    }
-}
-?></code></pre>
-
-<h3>libraryData.php</h3>
-<pre><code>&lt;?php
-//First make an array for the books, to loop through later 
-$books = [];
-
-//Create books in library
-$book1 = new Book();
-$book1->set_details('The Forest Turtles of Gold', 'Francisco Surtees', null, 0);
-
-$book2 = new Book();
-$book2->set_details('Staff of the Day, Girlfriends and Visitors', 'B. Remzijareda Piddlykins', 'Mirza Lozano', 42);
-
-$book3 = new Book();
-$book3->set_details('Jealous of my Mom Puzzling with my Dad', 'Genevieve Williamson', 'Princess Imogen Audley', 3);
-
-$book4 = new Book();
-$book4->set_details('The Clown Ambitious', 'Ramboni Svelbington', 'Jonas Donaldson', 1);
-
-$book5 = new Book();
-$book5->set_details('Buffoon Affair', 'M. P. Jumpy-Cat', 'Thornton Henley', 66);
-
-$book6 = new Book();
-$book6->set_details('The Sage Beasts Restore Cliffs', 'Mica R. Love', 'Amanda Rita Cole-Ramos-Foster-Brown-Baker-Smith', 12);
-
-$book7 = new Book();
-$book7->set_details('The Spider On A Day Out', 'Lord Delight Plantagenet', 'Audie Winfred Fieldse-Botwrighte', 9);
-
-/*Now put all books inside the array we declared earlier.
-Easy to make a new book object then put it in here.*/
-$books = [$book1, $book2, $book3, $book4, $book5, $book6, $book7];
-?></code></pre>
-
-<h3>index.php</h3>
-<pre><code>&lt;?php
-include 'Book.php';
-include 'libraryData.php';
-
-//Display books using a loop
-
-for($i = 0; $i &lt; count($books); $i++) {
-    $books[$i]->get_details();
-    calculateLateFee($books[$i]->daysBorrowed);
-    getStatus($books[$i]->borrowerName);
-}
-?></code></pre>
+    <h1>Hi! This is NOT the code.</h1>
+    <h2>Sorry! Baka sitahin kasi ako ni Sir :&rpar;</h2>
+    <pre>
+    <img src="loops GIF.gif" alt="Escher!">
+    </pre>
 </body>
+
 </html>
