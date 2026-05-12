@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 2</title>
+    <style>
+        body {
+            background: #111827;
+            color: #ffffff;
+            font-family: monospace;
+            padding: 20px;
+        }
+
+        pre {
+            background: #1f2937;
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+        }
+
+        code {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hi! This is the code. Pa copy paste na lang sa C++ compiler. :&rpar;</h1>
+    <pre><code>#include <iostream>;
+using namespace std;
+
+// Function para i-display ang board sa Output natin
+void displayBoard(char board[3][3]) {
+    cout << "\n";
+    for(int i = 0; i < 3; i++) {
+        for(int j = 0; j < 3; j++) {
+            cout << board[i][j];
+            if(j < 2) cout << " | ";
+        }
+        cout << endl;
+        if(i < 2) cout << "--+---+--" << endl;
+    }
+}
+
+// Function para i-check kung nanalo na ang current player
+bool checkWin(char board[3][3], char player) {
+    for(int i = 0; i < 3; i++)
+        if(board[i][0]==player && board[i][1]==player && board[i][2]==player)
+            return true;
+
+    for(int j = 0; j < 3; j++)
+        if(board[0][j]==player && board[1][j]==player && board[2][j]==player)
+            return true;
+
+    if(board[0][0]==player && board[1][1]==player && board[2][2]==player)
+        return true;
+
+    if(board[0][2]==player && board[1][1]==player && board[2][0]==player)
+        return true;
+
+    return false;
+}
+
+// Function para i-check kung puno na ang board (draw)
+bool checkDraw(char board[3][3]) {
+    for(int i=0;i<3;i++)
+        for(int j=0;j<3;j++)
+            if(board[i][j] != 'X' && board[i][j] != 'O')
+                return false;
+    return true;
+}
+
+int main() {
+    char board[3][3] = { {'1','2','3'}, {'4','5','6'}, {'7','8','9'} };
+    char currentPlayer = 'X';
+    int pos;
+    bool gameOver = false;
+
+    cout << "TIC TAC TOE\n";
+
+    while(!gameOver) {
+        displayBoard(board);
+
+        while(true) {
+            cout << "\nPlayer " << currentPlayer << ", choose position (1-9): ";
+            cin >> pos;
+
+            // Para sa letters at invalid input
+            if(cin.fail()) {
+                cin.clear();
+                cin.ignore(1000, '\n');
+                cout << "Invalid input! Enter numbers only (1-9).\n";
+                continue;
+            }
+
+            if(pos < 1 || pos > 9) {
+                cout << "Invalid input! Enter 1-9.\n";
+                continue;
+            }
+
+            int row = (pos-1)/3;
+            int col = (pos-1)%3;
+
+            if(board[row][col] != 'X' && board[row][col] != 'O') {
+                board[row][col] = currentPlayer;
+                break;
+            } else {
+                cout << "Position already taken! Try again.\n";
+            }
+        }
+
+        if(checkWin(board, currentPlayer)) {
+            displayBoard(board);
+            cout << "\nPlayer " << currentPlayer << " wins!\n";
+            gameOver = true;
+        }
+        else if(checkDraw(board)) {
+            displayBoard(board);
+            cout << "\nIt's a draw!\n";
+            gameOver = true;
+        }
+        else {
+            currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
+        }
+    }
+
+    return 0;
+}</code></pre>
+</body>
+</html>

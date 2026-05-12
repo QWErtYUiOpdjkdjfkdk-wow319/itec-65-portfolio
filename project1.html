@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1</title>
+    <style>
+        body {
+            background: #111827;
+            color: #ffffff;
+            font-family: monospace;
+            padding: 20px;
+        }
+
+        pre {
+            background: #1f2937;
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+        }
+
+        code {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hi! This is the code. Pa copy paste na lang sa Python compiler. :&rpar;</h1>
+    <pre><code>print('Welcome to Fresh from the Kitchen! We are ready to serve you.\n')
+
+#iprint ang menu
+while True:
+    print('CHOICES')
+    print('\t1. DRINKS')
+    print('\t2. RICE MEAL')
+
+    try:
+        choice = int(input('\nEnter your choice: '))
+
+        if choice in [1, 2]:
+            break
+        else:
+            print('Invalid main menu choice. Please try again.\n')
+
+    except ValueError:
+        print('Please enter a number only.\n')
+
+#pag drinks ang pinili
+if choice == 1:
+
+    while True:
+        print('Choose your drinks:')
+        print('\tA. SOFT DRINKS')
+        print('\tB. JUICE')
+        print('\tC. ICED TEA')
+
+        drinks = input('\nEnter your choice: ').lower()
+
+        if drinks in ['a', 'b', 'c']:
+            break
+        else:
+            print('Invalid drink choice. Please try again.\n')
+
+    while True:
+        print('Size you prefer:')
+        print('\tA. REGULAR')
+        print('\tB. MEDIUM')
+
+        size = input('\nEnter your choice: ').lower()
+
+        if size in ['a', 'b']:
+            break
+        else:
+            print('Invalid size choice. Please try again.\n')
+
+    if drinks == 'a':
+        if size == 'a':
+            print('Your order is a Regular Soft Drink')
+        else:
+            print('Your order is a Medium Soft Drink')
+
+    elif drinks == 'b':
+        if size == 'a':
+            print('Your order is a Regular Juice')
+        else:
+            print('Your order is a Medium Juice')
+
+    elif drinks == 'c':
+        if size == 'a':
+            print('Your order is a Regular Iced Tea')
+        else:
+            print('Your order is a Medium Iced Tea')
+
+#pag rice meal ang pinili
+elif choice == 2:
+
+    while True:
+        print('Choose your meal:')
+        print('\tA. BURGER STEAK')
+        print('\tB. CHICKEN NUGGETS')
+        print('\tC. TAPSILOG')
+
+        meal = input('\nEnter your choice: ').lower()
+
+        if meal in ['a', 'b', 'c']:
+            break
+        else:
+            print('Invalid meal choice. Please try again.\n')
+
+    while True:
+        print('Size you prefer:')
+        print('\tA. REGULAR')
+        print('\tB. MEDIUM')
+
+        size = input('\nEnter your choice: ').lower()
+
+        if size in ['a', 'b']:
+            break
+        else:
+            print('Invalid size choice. Please try again.\n')
+
+    if meal == 'a':
+        if size == 'a':
+            print('Your order is a Regular Burger Steak')
+        else:
+            print('Your order is a Medium Burger Steak')
+
+    elif meal == 'b':
+        if size == 'a':
+            print('Your order is Regular Chicken Nuggets')
+        else:
+            print('Your order is Medium Chicken Nuggets')
+
+    elif meal == 'c':
+        if size == 'a':
+            print('Your order is a Regular Tapsilog')
+        else:
+            print('Your order is a Medium Tapsilog')
+
+#payments
+while True:
+    print('\nThank you for dining at Fresh from the Kitchen!')
+    print('Will you be paying by cash or credit card?')
+
+    payment = input().lower()
+
+    if payment in ['cash', 'credit', 'credit card', 'cred']:
+        print('OK! Your order will be ready soon.')
+        print('Please pick up the receipt and hand it over to the cashier.')
+        print('Have a nice meal!')
+        break
+    else:
+        print('We think you have made a mistake. Please try again.\n')</code></pre>
+</body>
